@@ -1,0 +1,99 @@
+﻿@model Login.Models.HostelData
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/style/StyleSheet1.css">
+    <meta name="viewport" content="width=device-width" />
+    <title>Find</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+
+        <div class="form-wrap">
+            <div><h1>Edit Details</h1></div><hr /><br />
+
+            <table>
+                <tr>
+                    <td>Enter the Roll No:</td>
+                    <td>@Html.EditorFor((m) => m.RollNo)</td>
+                </tr>
+                <tr>
+                    <td>Enter the Name: </td>
+                    <td>@Html.EditorFor((m) => m.Name)</td>
+                </tr>
+                <tr>
+                    <td>Enter the Room No:</td>
+                    <td>@Html.EditorFor((m) => m.RoomNo)</td>
+                </tr>
+                <tr>
+                    <td>Enter the Hostel Name:</td>
+                    <td>@Html.EditorFor((m) => m.HostelName)</td>
+                </tr>
+                <tr>
+                    <td>Enter the Contact No:</td>
+                    <td>@Html.EditorFor((m) => m.ContactNo)</td>
+                </tr>
+            </table>
+            <center>
+                <button style="        color: #3e3d3d;
+        border: 0;
+        background: #bac675;
+        padding: 15px 32px;
+        font-family: Century Gothic;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        color: #1a1a1a;
+        font-size: 20px;
+        font-family: Century Gothic;
+            color: #fff;">
+                    Save Changes
+                </button>
+            </center>
+
+
+
+
+        </div>
+    }
+
+
+
+
+
+
+
+
+
+
+    @*<div style="background-color:moccasin">
+            @using (Html.BeginForm())
+            {
+                <p>
+                    Enter the Roll No: @Html.EditorFor((m) => m.RollNo)
+                </p>
+                <p>
+                    Enter the Name: @Html.EditorFor((m) => m.Name)
+                </p>
+                <p>
+                    Enter the Room No: @Html.EditorFor((m) => m.RoomNo)
+                </p>
+                <p>
+                    Enter the Hostel Name: @Html.EditorFor((m) => m.HostelName)
+                </p>
+                <p>
+                    Enter the Contact No: @Html.EditorFor((m) => m.ContactNo)
+                </p>
+                <button>Save Changes</button>
+            }
+        </div>*@
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿@model Login.Models.HostelData
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewStudent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Century Gothic;
+            color: #fff;
+        }
+
+        body 
+        {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(../../photo/hostelPMS-1.jpg);
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .form-wrap {
+            width: 400px;
+            background: #3e3d3d;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            background: none;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            padding: 6px 15px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+
+           
+
+
+
+
+        
+    </style>
+
+</head>
+<body>
+    <main>
+        @*<img src="~/photo/images.jpg" />*@
+
+
+
+       
+
+
+
+        @using (Html.BeginForm())
+
+        { 
+    <div class="form-wrap">
+        <center><h1>ADD NEW STUDENT</h1></center><hr /><br />
+
+
+        <center>
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+
+                <tr>
+                    <td align="center">Enter Roll No: </td>
+                    <td>@Html.EditorFor((m) => m.RollNo)</td>
+
+                </tr>
+                <tr>
+                    <td align="center">Enter Name: </td>
+                    <td>@Html.EditorFor((m) => m.Name)</td>
+
+                </tr>
+
+                <tr>
+                    <td align="center">Enter Room No:</td>
+                    <td> @Html.EditorFor((m) => m.RoomNo)</td>
+
+                </tr>
+                <tr>
+                    <td align="center">Enter Hostel Name: </td>
+                    <td>@Html.EditorFor((m) => m.HostelName)</td>
+
+
+                </tr>
+                <tr>
+                    <td align="center">Enter Contact No:</td>
+                    <td>@Html.EditorFor((m) => m.ContactNo)</td>
+
+
+                </tr>
+
+            </table>
+            <center>
+                <button style="        color: #3e3d3d;
+        border: 0;
+        background: #bac675;
+        padding: 15px 32px;
+        font-family: Century Gothic;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        color: #1a1a1a;
+        font-size: 20px;
+        font-family: Century Gothic;
+            color: #fff;">
+                    ADD
+                </button>
+            </center>
+        </center>
+
+
+
+
+
+
+
+
+
+    </div>
+        }
+    </main>
+</body>
+</html>

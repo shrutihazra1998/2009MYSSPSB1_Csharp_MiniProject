@@ -1,0 +1,117 @@
+﻿@model List<Login.Models.HostelData>
+
+    @{
+        Layout = null;
+        
+    }
+
+
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="Stylesheet" type="text/css" href="~/style/style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>All Students</title>
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(../../photo/ash.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+  ">
+
+    <header>
+        <div class="main">
+            <ul>
+                <li ><a href="@Url.Action("Logout","Home")" class="btn btn-warning">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <br /><br />
+
+
+
+
+
+    <center><h2>ALL STUDENT DETAILS</h2></center>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Room No.</th>
+                    <th>Hostel Name</th>
+                    <th>Contact No.</th>
+                    <th>Edit Details</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var stu in Model)
+                    {
+                    <tr>
+
+                        <td>@stu.RollNo</td>
+                        <td>@stu.Name</td>
+                        <td>@stu.RoomNo</td>
+                        <td>@stu.HostelName</td>
+                        <td>@stu.ContactNo</td>
+                        <td>
+                            <button style="border: none; background-color: #ffcc99; font-family: Arial; font-size: medium">  @Html.ActionLink("Edit Student Detail", "Find", new { id = stu.RollNo })</button>
+
+                            <button style="border: none; background-color: #ffcc99; font-family: Arial; font-size: medium"> @Html.ActionLink("Delete Student", "Delete", new { id = stu.RollNo })</button>
+                        </td>
+                    </tr>
+
+                }
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <center>
+                <button style="        border: 0;
+        background: #ffcc99;
+        padding: 15px 32px;
+        font-family: Century Gothic;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;">
+                    @Html.ActionLink("ADD NEW STUDENT", "NewStudent")
+                </button>
+            </center>
+
+            @*<a href="@Url.Action("Logout","Home")" class="btn btn-warning">Logout</a>*@
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
