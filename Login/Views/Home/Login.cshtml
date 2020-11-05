@@ -1,0 +1,46 @@
+﻿@model Login.Models.UserLogin
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<body style="    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../photo/blu.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    ">
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Login
+            </div>
+            <div class="card-body">
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Email" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "badge badge-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "badge badge-danger" })
+                    </div>
+                    <div class="form-group">
+                        <center><input type="submit" name="submit" class="btn btn-primary" value="Login" /></center>
+                    </div>
+                }
+            </div>
+
+            <button>@Html.ActionLink("Create Account", "Register")</button> 
+
+        </div>
+    </div>
+</div>
+</body>
+
