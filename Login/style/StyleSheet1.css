@@ -1,0 +1,43 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+    color: #fff;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(../../photo/hostel-7.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-wrap {
+    width: 510px;
+    background: none;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    text-align: left;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 6px 15px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+}
