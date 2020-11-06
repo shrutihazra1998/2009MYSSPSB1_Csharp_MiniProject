@@ -1,2 +1,3 @@
 # 2009MYSSPSB1_Csharp_MiniProject
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/31ade26e5b5c4e2bb86e6a76dbdfd1c6)](https://app.codacy.com/gh/shrutihazra1998/2009MYSSPSB1_Csharp_MiniProject?utm_source=github.com&utm_medium=referral&utm_content=shrutihazra1998/2009MYSSPSB1_Csharp_MiniProject&utm_campaign=Badge_Grade)
 [![Build Status](https://dev.azure.com/MiniProject2009MYSSPSB1/Csharp%20project/_apis/build/status/Genesis99002643.2009MYSSPSB1_Csharp_MiniProject?branchName=master)](https://dev.azure.com/MiniProject2009MYSSPSB1/Csharp%20project/_build/latest?definitionId=1&branchName=master)
